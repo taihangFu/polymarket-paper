@@ -13,7 +13,32 @@
     "feesUsdEst": 0,
     "notes": "scaffold — no paper fills yet"
   },
-  "summaryText": "2026-10-25 HKT · zero live · paper scaffold only — no fills yet.",
-  "candidates": [],
+  "summaryText": "2026-10-25 HKT · zeroLive · trades=0 · scaffold — no fills yet. Priority: ceasefire / Brazil MoV / Israel seats↔PM; Greenland NOISE.",
+  "candidates": [
+    {
+      "title": "US–Iran ceasefire continues through Oct 31",
+      "url": "https://polymarket.com/event/israel-x-iran-ceasefire",
+      "status": "WATCH",
+      "note": "Strategy #1 paper; rules narrative edge"
+    },
+    {
+      "title": "Brazil MoV buckets (Flávio)",
+      "url": "https://polymarket.com/event/brazil-presidential-election",
+      "status": "WATCH",
+      "note": "Strategy #2; winner vs margin sum"
+    },
+    {
+      "title": "Israel seats↔PM (Yashar / Eizenkot)",
+      "url": "https://polymarket.com",
+      "status": "MONITOR",
+      "note": "INVESTIGATE; seats≠sworn PM"
+    },
+    {
+      "title": "Greenland acquire / any-part / invade cluster",
+      "url": "https://polymarket.com/market/will-trump-acquire-greenland-before-2027",
+      "status": "NOISE",
+      "note": "gap 0.7¢; upgrade if gap≥3–4¢ or invade vol"
+    }
+  ],
   "trades": []
 }
