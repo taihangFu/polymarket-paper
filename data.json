@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "timezone": "Asia/Hong_Kong",
+  "mode": "paper",
+  "zeroLive": true,
+  "summary": {
+    "nTrades": 0,
+    "nOpen": 0,
+    "nClosed": 0,
+    "realizedPnlUsd": 0,
+    "unrealizedPnlUsd": 0,
+    "feesUsdEst": 0,
+    "notes": "scaffold — no paper fills yet"
+  },
+  "summaryText": "2026-10-25 HKT · zero live · paper scaffold only — no fills yet.",
+  "candidates": [],
+  "trades": []
+}

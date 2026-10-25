@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polymarket Paper Trading</title>
+  <style>
+    :root { --bg:#f5f5f7; --card:#fff; --text:#1d1d1f; --muted:#6e6e73; --accent:#0071e3; --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang TC","Helvetica Neue",sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg); color:var(--text); line-height:1.6; min-height:100vh; }
+    header { background:rgba(255,255,255,.72); border-bottom:1px solid rgba(0,0,0,.08); padding:16px 0; position:sticky; top:0; z-index:100; backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); }
+    .wrap { max-width:720px; margin:0 auto; padding:0 20px; }
+    .logo { font-weight:600; font-size:1.25rem; letter-spacing:-.01em; }
+    main { padding:40px 0 0; }
+    .section-title { font-size:1.35rem; margin:32px 0 16px; font-weight:600; letter-spacing:-.02em; }
+    .meta { color:var(--muted); font-size:.875rem; margin-bottom:12px; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:6px; font-size:.75rem; font-weight:600; margin-right:6px; background:rgba(0,0,0,.05); color:var(--muted); }
+    .badge.live-off { background:rgba(207,34,46,.1); color:var(--bad); }
+    .badge.WATCH,.badge.EDGE { background:rgba(26,127,55,.1); color:var(--ok); }
+    .badge.MONITOR { background:rgba(154,103,0,.12); color:var(--warn); }
+    .badge.NOISE { background:rgba(0,0,0,.06); color:var(--muted); }
+    .card { background:var(--card); border-radius:18px; padding:20px 24px; margin-bottom:12px; box-shadow:0 2px 12px rgba(0,0,0,.04); }
+    .card h3 { font-size:1.05rem; font-weight:600; margin-bottom:6px; }
+    .card p,.row { font-size:.9rem; color:var(--muted); margin-bottom:4px; }
+    .card a { color:var(--accent); text-decoration:none; font-size:.85rem; }
+    .empty { color:var(--muted); padding:20px 0; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px 0 8px; }
+    .stat { background:var(--card); border-radius:14px; padding:14px 16px; box-shadow:0 2px 12px rgba(0,0,0,.04); }
+    .stat .n { font-size:1.35rem; font-weight:600; letter-spacing:-.02em; }
+    .stat .l { font-size:.75rem; color:var(--muted); }
+    footer { max-width:720px; margin:56px auto; padding:0 20px; text-align:center; color:var(--muted); font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><div class="logo">Polymarket Paper Trading</div></div></header>
+  <main class="wrap">
+    <div class="meta" id="meta">載入中…</div>
+    <div id="summary-notes" class="card" style="display:none"></div>
+    <div class="stats" id="stats"></div>
+    <h2 class="section-title">候選盤</h2>
+    <div id="candidates"></div>
+    <h2 class="section-title">Paper 成交</h2>
+    <div id="trades"></div>
+  </main>
+  <footer>Paper only · Engineering schema v1 · zeroLive until unlocked</footer>
+  <script>
+    function badge(t){ return '<span class="badge '+t+'">'+t+'</span>'; }
+    function money(n){ if(n==null||n==='') return '—'; return (Number(n)>=0?'+':'')+Number(n).toFixed(2); }
+    function pct(n){ return n==null?'—':(Number(n)*100).toFixed(1)+'%'; }
+    fetch('data.json').then(r=>r.json()).then(d=>{
+      const zl = d.zeroLive!==false;
+      document.getElementById('meta').innerHTML =
+        (zl?badge('live-off')+'zeroLive':'')+' '+
+        (d.date||'')+' · schema '+d.schemaVersion+' · '+(d.timezone||'');
+      const s = d.summary||{};
+      const notes = d.summaryText || s.notes || '';
+      if(notes){ const el=document.getElementById('summary-notes'); el.style.display='block'; el.innerHTML='<p>'+notes+'</p>'; }
+      document.getElementById('stats').innerHTML = [
+        ['成交', s.nTrades??0],['未平', s.nOpen??0],['已平', s.nClosed??0],
+        ['已實現$', money(s.realizedPnlUsd)],['未實現$', money(s.unrealizedPnlUsd)],['費估$', money(s.feesUsdEst)]
+      ].map(([l,n])=>'<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>').join('');
+      const cands = d.candidates||[];
+      document.getElementById('candidates').innerHTML = cands.length? cands.map(c=>
+        '<div class="card">'+badge(c.status||'?')+'<h3>'+c.title+'</h3>'+
+        (c.note?'<p>'+c.note+'</p>':'')+
+        (c.url?'<a href="'+c.url+'" target="_blank" rel="noopener">市場 →</a>':'')+
+        '</div>').join('') : '<div class="empty">今日無候選（空陣列）</div>';
+      const trades = d.trades||d.papers||[];
+      document.getElementById('trades').innerHTML = trades.length? trades.map(t=>{
+        const title = t.marketTitle||t.title||t.id||'—';
+        const st = (t.status||t.state||'').toString().toUpperCase();
+        const side = t.side||'';
+        const entry = t.entryFill!=null?t.entryFill:(t.entry!=null?t.entry:null);
+        const exit = t.exitFill!=null?t.exitFill:(t.exit!=null?t.exit:null);
+        const ev = t.evUsdEst!=null?t.evUsdEst:(t.ev!=null?t.ev:null);
+        const slip = t.slipBpsEst!=null?(t.slipBpsEst+' bps'):(t.slip!=null?pct(t.slip):'—');
+        const scan = t.scannerState?badge(t.scannerState):'';
+        return '<div class="card">'+badge(st||'OPEN')+scan+
+          '<h3>'+title+' · '+side+'</h3>'+
+          '<div class="row">進 '+pct(entry)+' → 出 '+(exit==null?'—':pct(exit))+' · slip '+slip+' · EV '+(ev==null?'—':(typeof ev==='number'&&Math.abs(ev)>1?money(ev):pct(ev)))+'</div>'+
+          (t.thesis?'<p>'+t.thesis+'</p>':'')+
+          (t.url?'<a href="'+t.url+'" target="_blank" rel="noopener">市場 →</a>':'')+
+          '</div>';
+      }).join('') : '<div class="empty">尚無 paper 成交（trades=[]）</div>';
+    }).catch(e=>{
+      document.getElementById('meta').textContent='載入失敗';
+      console.error(e);
+    });
+  </script>
+</body>
+</html>
