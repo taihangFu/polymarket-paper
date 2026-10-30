@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "timezone": "Asia/Hong_Kong",
   "mode": "paper",
   "zeroLive": true,
@@ -11,7 +11,7 @@
     "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
     "feesUsdEst": null,
-    "notes": "SETTLED 2026-10-30T23:43:39+08:00: Lula won presidency; Flávio winner=No, all Flávio MoV=No. Paper package closed; realized $6.0 (= gross +3.0¢×200). Fees not deducted. zeroLive."
+    "notes": "Daily refresh 2026-10-31T00:05+08:00: open=0 closed=5 realized=$6.0. Brazil MoV package closed realized $6.0 (+3.0¢×200, fees not deducted). Ceasefire MONITOR. zeroLive."
   },
   "trades": [
     {
@@ -217,29 +217,29 @@
   ],
   "candidates": [
     {
-      "title": "Brazil MoV paper package SETTLED",
-      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "title": "Brazil MoV paper (SETTLED)",
+      "url": "https://polymarket.com/event/brazil-presidential-election",
       "status": "NOISE",
-      "note": "SETTLED 10/30; Flávio No + MoV shorts covered; paper realized $6.0; off watch"
+      "note": "closed +$6.0 paper; Lula won <4% MoV"
     },
     {
       "title": "US–Iran ceasefire through Oct 31",
       "url": "https://polymarket.com/event/israel-x-iran-ceasefire",
-      "status": "WATCH",
-      "note": "Daily board still open Yes~85¢ through Oct31; rules impact+consensus trap; no paper fill"
+      "status": "MONITOR",
+      "note": "deadline ~today; no paper unless fair skew"
     },
     {
       "title": "Israel seats↔PM",
       "url": "https://polymarket.com",
-      "status": "WATCH",
-      "note": "seats≠sworn PM; Bibi sworn-in ~42.5¢ on daily; URL needs specific market — INVESTIGATE not EDGE"
+      "status": "MONITOR",
+      "note": "INVESTIGATE backlog"
     },
     {
       "title": "Greenland cluster",
       "url": "https://polymarket.com/market/will-trump-acquire-greenland-before-2027",
       "status": "NOISE",
-      "note": "gap thin; alert only until gap≥3–4¢ or invade vol"
+      "note": "alert only"
     }
   ],
-  "summaryText": "2026-10-30 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV package pt-20261025-001). Candidates: Brazil NOISE (settled); ceasefire WATCH; Israel seats↔PM WATCH/investigate; Greenland NOISE. No invented fills."
+  "summaryText": "2026-10-31 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Daily board refresh 00:05. No new fills."
 }
