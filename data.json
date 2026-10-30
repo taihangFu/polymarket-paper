@@ -1,44 +1,245 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-25",
+  "date": "2026-10-30",
   "timezone": "Asia/Hong_Kong",
   "mode": "paper",
   "zeroLive": true,
   "summary": {
-    "nTrades": 0,
+    "nTrades": 5,
     "nOpen": 0,
-    "nClosed": 0,
-    "realizedPnlUsd": 0,
+    "nClosed": 5,
+    "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
-    "feesUsdEst": 0,
-    "notes": "scaffold — no paper fills yet"
+    "feesUsdEst": null,
+    "notes": "SETTLED 2026-10-30T23:43:39+08:00: Lula won presidency; Flávio winner=No, all Flávio MoV=No. Paper package closed; realized $6.0 (= gross +3.0¢×200). Fees not deducted. zeroLive."
   },
-  "summaryText": "2026-10-25 HKT · zeroLive · trades=0 · scaffold — no fills yet. Priority: ceasefire / Brazil MoV / Israel seats↔PM; Greenland NOISE.",
-  "candidates": [
+  "trades": [
     {
-      "title": "US–Iran ceasefire continues through Oct 31",
-      "url": "https://polymarket.com/event/israel-x-iran-ceasefire",
-      "status": "WATCH",
-      "note": "Strategy #1 paper; rules narrative edge"
+      "id": "pt-20261025-001a",
+      "tsOpen": "2026-10-25T15:57:00+08:00",
+      "tsClose": "2026-10-30T23:43:39+08:00",
+      "status": "closed",
+      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "marketTitle": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+      "url": "https://polymarket.com/market/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "side": "Yes",
+      "action": "buy",
+      "sizeUsd": 159.8,
+      "sizeShares": 200,
+      "entryMid": 0.799,
+      "entryFill": 0.799,
+      "exitMid": 0.0,
+      "exitFill": 0.0,
+      "slipBpsEst": 0,
+      "feesUsdEst": null,
+      "fairValue": null,
+      "edgeAtEntry": null,
+      "evUsdEst": null,
+      "scannerState": "NOISE",
+      "strategyPriority": "paper",
+      "thesis": "Brazil MoV ⊆ violation: long winner / short Flávio MoV buckets; package pt-20261025-001",
+      "ruleRisk": "med",
+      "realizedPnlUsd": -159.8,
+      "source": {
+        "strategy": "APPROVED",
+        "execution": "paper_ok@15:57HKT",
+        "quant": "locked",
+        "rules": "⊆ OK"
+      },
+      "tags": [
+        "brazil",
+        "mov",
+        "paper",
+        "pt-20261025-001",
+        "winner"
+      ]
     },
     {
-      "title": "Brazil MoV buckets (Flávio)",
-      "url": "https://polymarket.com/event/brazil-presidential-election",
-      "status": "WATCH",
-      "note": "Strategy #2; winner vs margin sum"
+      "id": "pt-20261025-001b",
+      "tsOpen": "2026-10-25T15:57:00+08:00",
+      "tsClose": "2026-10-30T23:43:39+08:00",
+      "status": "closed",
+      "marketSlug": "will-flavio-bolsonaro-win-the-second-round-of-the-2026-brazilian-presidential-election-by-less-than-4",
+      "marketTitle": "Flávio MoV <4%",
+      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "side": "Yes",
+      "action": "sell",
+      "sizeUsd": 78.0,
+      "sizeShares": 200,
+      "entryMid": 0.39,
+      "entryFill": 0.39,
+      "exitMid": 0.0,
+      "exitFill": 0.0,
+      "slipBpsEst": 0,
+      "feesUsdEst": null,
+      "fairValue": null,
+      "edgeAtEntry": null,
+      "evUsdEst": null,
+      "scannerState": "NOISE",
+      "strategyPriority": "paper",
+      "thesis": "Brazil MoV ⊆ violation: long winner / short Flávio MoV buckets; package pt-20261025-001",
+      "ruleRisk": "med",
+      "realizedPnlUsd": 78.0,
+      "source": {
+        "strategy": "APPROVED",
+        "execution": "paper_ok@15:57HKT",
+        "quant": "locked",
+        "rules": "⊆ OK"
+      },
+      "tags": [
+        "brazil",
+        "mov",
+        "paper",
+        "pt-20261025-001",
+        "mov_<4"
+      ]
     },
     {
-      "title": "Israel seats↔PM (Yashar / Eizenkot)",
-      "url": "https://polymarket.com",
-      "status": "MONITOR",
-      "note": "INVESTIGATE; seats≠sworn PM"
+      "id": "pt-20261025-001c",
+      "tsOpen": "2026-10-25T15:57:00+08:00",
+      "tsClose": "2026-10-30T23:43:39+08:00",
+      "status": "closed",
+      "marketSlug": "will-flavio-bolsonaro-win-the-second-round-of-the-2026-brazilian-presidential-election-by-48",
+      "marketTitle": "Flávio MoV 4–8%",
+      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "side": "Yes",
+      "action": "sell",
+      "sizeUsd": 76.0,
+      "sizeShares": 200,
+      "entryMid": 0.38,
+      "entryFill": 0.38,
+      "exitMid": 0.0,
+      "exitFill": 0.0,
+      "slipBpsEst": 0,
+      "feesUsdEst": null,
+      "fairValue": null,
+      "edgeAtEntry": null,
+      "evUsdEst": null,
+      "scannerState": "NOISE",
+      "strategyPriority": "paper",
+      "thesis": "Brazil MoV ⊆ violation: long winner / short Flávio MoV buckets; package pt-20261025-001",
+      "ruleRisk": "med",
+      "realizedPnlUsd": 76.0,
+      "source": {
+        "strategy": "APPROVED",
+        "execution": "paper_ok@15:57HKT",
+        "quant": "locked",
+        "rules": "⊆ OK"
+      },
+      "tags": [
+        "brazil",
+        "mov",
+        "paper",
+        "pt-20261025-001",
+        "mov_4-8"
+      ]
     },
     {
-      "title": "Greenland acquire / any-part / invade cluster",
-      "url": "https://polymarket.com/market/will-trump-acquire-greenland-before-2027",
-      "status": "NOISE",
-      "note": "gap 0.7¢; upgrade if gap≥3–4¢ or invade vol"
+      "id": "pt-20261025-001d",
+      "tsOpen": "2026-10-25T15:57:00+08:00",
+      "tsClose": "2026-10-30T23:43:39+08:00",
+      "status": "closed",
+      "marketSlug": "will-flavio-bolsonaro-win-the-second-round-of-the-2026-brazilian-presidential-election-by-812",
+      "marketTitle": "Flávio MoV 8–12%",
+      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "side": "Yes",
+      "action": "sell",
+      "sizeUsd": 9.4,
+      "sizeShares": 200,
+      "entryMid": 0.047,
+      "entryFill": 0.047,
+      "exitMid": 0.0,
+      "exitFill": 0.0,
+      "slipBpsEst": 0,
+      "feesUsdEst": null,
+      "fairValue": null,
+      "edgeAtEntry": null,
+      "evUsdEst": null,
+      "scannerState": "NOISE",
+      "strategyPriority": "paper",
+      "thesis": "Brazil MoV ⊆ violation: long winner / short Flávio MoV buckets; package pt-20261025-001",
+      "ruleRisk": "med",
+      "realizedPnlUsd": 9.4,
+      "source": {
+        "strategy": "APPROVED",
+        "execution": "paper_ok@15:57HKT",
+        "quant": "locked",
+        "rules": "⊆ OK"
+      },
+      "tags": [
+        "brazil",
+        "mov",
+        "paper",
+        "pt-20261025-001",
+        "mov_8-12"
+      ]
+    },
+    {
+      "id": "pt-20261025-001e",
+      "tsOpen": "2026-10-25T15:57:00+08:00",
+      "tsClose": "2026-10-30T23:43:39+08:00",
+      "status": "closed",
+      "marketSlug": "will-flavio-bolsonaro-win-the-second-round-of-the-2026-brazilian-presidential-election-by-at-least-12",
+      "marketTitle": "Flávio MoV ≥12%",
+      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "side": "Yes",
+      "action": "sell",
+      "sizeUsd": 2.4,
+      "sizeShares": 200,
+      "entryMid": 0.012,
+      "entryFill": 0.012,
+      "exitMid": 0.0,
+      "exitFill": 0.0,
+      "slipBpsEst": 0,
+      "feesUsdEst": null,
+      "fairValue": null,
+      "edgeAtEntry": null,
+      "evUsdEst": null,
+      "scannerState": "NOISE",
+      "strategyPriority": "paper",
+      "thesis": "Brazil MoV ⊆ violation: long winner / short Flávio MoV buckets; package pt-20261025-001",
+      "ruleRisk": "med",
+      "realizedPnlUsd": 2.4,
+      "source": {
+        "strategy": "APPROVED",
+        "execution": "paper_ok@15:57HKT",
+        "quant": "locked",
+        "rules": "⊆ OK"
+      },
+      "tags": [
+        "brazil",
+        "mov",
+        "paper",
+        "pt-20261025-001",
+        "mov_12+"
+      ]
     }
   ],
-  "trades": []
+  "candidates": [
+    {
+      "title": "Brazil MoV paper package SETTLED",
+      "url": "https://polymarket.com/event/brazil-presidential-election-second-round-margin-of-victory",
+      "status": "NOISE",
+      "note": "SETTLED 10/30; Flávio No + MoV shorts covered; paper realized $6.0; off watch"
+    },
+    {
+      "title": "US–Iran ceasefire through Oct 31",
+      "url": "https://polymarket.com/event/israel-x-iran-ceasefire",
+      "status": "WATCH",
+      "note": "Daily board still open Yes~85¢ through Oct31; rules impact+consensus trap; no paper fill"
+    },
+    {
+      "title": "Israel seats↔PM",
+      "url": "https://polymarket.com",
+      "status": "WATCH",
+      "note": "seats≠sworn PM; Bibi sworn-in ~42.5¢ on daily; URL needs specific market — INVESTIGATE not EDGE"
+    },
+    {
+      "title": "Greenland cluster",
+      "url": "https://polymarket.com/market/will-trump-acquire-greenland-before-2027",
+      "status": "NOISE",
+      "note": "gap thin; alert only until gap≥3–4¢ or invade vol"
+    }
+  ],
+  "summaryText": "2026-10-30 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV package pt-20261025-001). Candidates: Brazil NOISE (settled); ceasefire WATCH; Israel seats↔PM WATCH/investigate; Greenland NOISE. No invented fills."
 }
