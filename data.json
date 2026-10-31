@@ -11,7 +11,7 @@
     "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
     "feesUsdEst": null,
-    "notes": "Daily refresh 2026-10-31T00:05+08:00: open=0 closed=5 realized=$6.0. Brazil MoV package closed realized $6.0 (+3.0¢×200, fees not deducted). Ceasefire MONITOR. zeroLive."
+    "notes": "Daily refresh 2026-10-31T21:01+08:00: open=0 closed=5 realized=$6.0. Brazil MoV package closed realized $6.0 (+3.0¢×200, fees not deducted). Ceasefire MONITOR. zeroLive."
   },
   "trades": [
     {
@@ -224,7 +224,7 @@
     },
     {
       "title": "US–Iran ceasefire through Oct 31",
-      "url": "https://polymarket.com/event/israel-x-iran-ceasefire",
+      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917",
       "status": "MONITOR",
       "note": "deadline ~today; no paper unless fair skew"
     },
@@ -241,5 +241,6 @@
       "note": "alert only"
     }
   ],
-  "summaryText": "2026-10-31 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Daily board refresh 00:05. No new fills."
+  "summaryText": "2026-10-31 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Daily board refresh 21:01. No new fills."
 }
+
