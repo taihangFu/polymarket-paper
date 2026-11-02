@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-31",
+  "date": "2026-11-02",
   "timezone": "Asia/Hong_Kong",
   "mode": "paper",
   "zeroLive": true,
@@ -11,7 +11,7 @@
     "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
     "feesUsdEst": null,
-    "notes": "Daily refresh 2026-10-31T21:01+08:00: open=0 closed=5 realized=$6.0. Brazil MoV package closed realized $6.0 (+3.0¢×200, fees not deducted). Ceasefire MONITOR. zeroLive."
+    "notes": "Daily refresh 2026-11-02T21:02+08:00: open=0 closed=5 realized=$6.0. Soft day-roll (missed 2026-11-01 push); no new fills. Brazil MoV package closed realized $6.0. Ceasefire MONITOR. zeroLive."
   },
   "trades": [
     {
@@ -241,6 +241,5 @@
       "note": "alert only"
     }
   ],
-  "summaryText": "2026-10-31 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Daily board refresh 21:01. No new fills."
+  "summaryText": "2026-11-02 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Soft day-roll; no new fills."
 }
-
