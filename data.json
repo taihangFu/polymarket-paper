@@ -11,7 +11,7 @@
     "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
     "feesUsdEst": null,
-    "notes": "Daily refresh 2026-11-02T21:02+08:00: open=0 closed=5 realized=$6.0. Soft day-roll (missed 2026-11-01 push); no new fills. Brazil MoV package closed realized $6.0. Ceasefire MONITOR. zeroLive."
+    "notes": "Daily refresh 2026-11-02T21:02+08:00: open=0 closed=5 realized=$6.0. Dual soft PASS candidates (Nov8 MONITOR; Oct31 pending UMA; Israel Other NOISE). Catch-up missed 11-01. No new fills."
   },
   "trades": [
     {
@@ -226,13 +226,19 @@
       "title": "US–Iran ceasefire through Oct 31",
       "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917",
       "status": "MONITOR",
-      "note": "deadline ~today; no paper unless fair skew"
+      "note": "pending UMA settle; fair≈mid ≥99%, no skew / no paper"
+    },
+    {
+      "title": "US–Iran ceasefire through Nov 8",
+      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-november-8",
+      "status": "MONITOR",
+      "note": "Yes~76.5¢ broke <80% watch; no fair calib tonight — monitor only"
     },
     {
       "title": "Israel seats↔PM",
       "url": "https://polymarket.com",
       "status": "MONITOR",
-      "note": "INVESTIGATE backlog"
+      "note": "Other=NOISE (negRiskOther placeholder); MoV Bibi 5–6 pending UMA; seats≠PM INVESTIGATE backlog"
     },
     {
       "title": "Greenland cluster",
@@ -241,5 +247,5 @@
       "note": "alert only"
     }
   ],
-  "summaryText": "2026-11-02 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Soft day-roll; no new fills."
+  "summaryText": "2026-11-02 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Nov8 MONITOR; Oct31 pending UMA; Israel Other NOISE. No new fills."
 }
