@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "timezone": "Asia/Hong_Kong",
   "mode": "paper",
   "zeroLive": true,
@@ -11,7 +11,7 @@
     "realizedPnlUsd": 6.0,
     "unrealizedPnlUsd": 0,
     "feesUsdEst": null,
-    "notes": "Daily refresh 2026-11-02T21:02+08:00: open=0 closed=5 realized=$6.0. Dual soft PASS candidates (Nov8 MONITOR; Oct31 pending UMA; Israel Other NOISE). Catch-up missed 11-01. No new fills."
+    "notes": "Daily refresh 2026-11-03T20:43+08:00: open=0 closed=5 realized=$6.0. Dual soft PASS candidates (Nov8 SETTLED No→NOISE; Oct31 MONITOR OPEN+disputed ~86¢ Qeshm OOW; Nov3 ~2¢ curve anchor). Brazil +$6 unchanged. No new fills."
   },
   "trades": [
     {
@@ -226,26 +226,33 @@
       "title": "US–Iran ceasefire through Oct 31",
       "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917",
       "status": "MONITOR",
-      "note": "pending UMA settle; fair≈mid ≥99%, no skew / no paper"
+      "note": "OPEN+UMA disputed; Yes mid~86¢. Qeshm land strike ~Nov2 = qualifying typology but AFTER Oct31 23:59 IRST cutoff → not Oct31→No evidence; no paper into dispute"
     },
     {
-      "title": "US–Iran ceasefire through Nov 8",
-      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-november-8",
+      "title": "US–Iran ceasefire through Nov 8 (SETTLED No)",
+      "url": "https://polymarket.com/market/us-x-iran-ceasefire-continues-through-november-8",
+      "status": "NOISE",
+      "note": "gamma closed + uma resolved Yes=0; prior MONITOR ~76.5¢ direction correct; removed from MONITOR"
+    },
+    {
+      "title": "US–Iran ceasefire through Nov 3 (curve anchor)",
+      "url": "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt",
       "status": "MONITOR",
-      "note": "Yes~76.5¢ broke <80% watch; no fair calib tonight — monitor only"
+      "note": "uma proposed Yes~2.2¢ (<<80%); kill window Nov2–3; curve anchor only — no paper"
     },
     {
       "title": "Israel seats↔PM",
       "url": "https://polymarket.com",
       "status": "MONITOR",
-      "note": "Other=NOISE (negRiskOther placeholder); MoV Bibi 5–6 pending UMA; seats≠PM INVESTIGATE backlog"
+      "note": "Likud winner + seats 25–29 settled; PM still open (Eizenkot~46%/Bibi~32.5%); Other=NOISE backlog"
     },
     {
       "title": "Greenland cluster",
       "url": "https://polymarket.com/market/will-trump-acquire-greenland-before-2027",
       "status": "NOISE",
-      "note": "alert only"
+      "note": "alert only (~1.9%)"
     }
   ],
-  "summaryText": "2026-11-02 HKT · zeroLive · trades=5 closed · realized +$6.0 (Brazil MoV pt-20261025-001). Nov8 MONITOR; Oct31 pending UMA; Israel Other NOISE. No new fills."
+  "summaryText": "2026-11-03 HKT · zeroLive · trades=5 closed · realized +$6.0. Nov8 SETTLED No; Oct31 disputed ~86¢; Nov3 ~2¢ anchor. No new fills."
 }
+
